@@ -13,7 +13,8 @@ permissions: read-all
 jobs:
   main:
     uses: khulnasoft/actions/.github/workflows/push-action-composite.yml@master
-    secrets: inherit
+    secrets:
+      TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
     permissions:
       contents: write
       statuses: write
